@@ -1,0 +1,11 @@
+# Grepping
+DOMAIN="grep"
+format_sourcing_message
+
+GREP_OPTIONS="--exclude-dir=.svn"
+alias egrep="grep \
+    --extended-regexp \
+    --color=always \
+    --ignore-case"
+GREP_OPTIONS='--color=always'
+GREP_COLOR='1;35;40'

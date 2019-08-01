@@ -1,0 +1,6 @@
+# Vim tmp files
+*.swp
+*.swo
+
+# dot_env file
+.env.local

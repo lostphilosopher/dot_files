@@ -1,0 +1,7 @@
+# Cheat.sh
+DOMAIN="Cheat.sh"
+format_sourcing_message
+
+function manc() {
+  curl cheat.sh/$@
+}

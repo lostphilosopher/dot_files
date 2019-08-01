@@ -1,0 +1,10 @@
+# Bash history
+DOMAIN="bash_history"
+format_sourcing_message
+
+export HISTTIMEFORMAT="%h/%d - %H:%M:%S  "
+export HISTCONTROL=ignoredups:ignorespace
+shopt -s histappend
+export HISTSIZE=10000
+export HISTFILESIZE=5000
+shopt -s checkwinsize

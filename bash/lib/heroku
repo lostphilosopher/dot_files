@@ -1,0 +1,17 @@
+# Heroku
+DOMAIN="Heroku"
+format_sourcing_message
+
+herokuc () {
+  if ["$1" = ""]; then
+    echo 'You must specify a Heroku app name!';
+    return
+  fi
+  heroku run rails console --app $1
+}
+
+herokunotes () {
+  echo 'heroku run rails console --app <APP_NAME>';
+  echo 'heroku config:set <ENV_VAR_KEY>=<ENV_VAR_VALUE> --app <APP_NAME>';
+  echo 'heroku logs --tail --app <APP_NAME>';
+}

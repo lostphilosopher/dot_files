@@ -1,0 +1,17 @@
+# Rails
+DOMAIN="Rails"
+format_sourcing_message
+
+railsnew () { 
+  echo "Creating a new Rails project from https://raw.githubusercontent.com/lostphilosopher/rails_template/master/template.rb";
+  rails new $1 --database=postgresql -T -m 'https://raw.githubusercontent.com/lostphilosopher/rails_template/master/template.rb';
+}
+
+killdb () {
+  bundle exec rake db:drop RAILS_ENV=$1;
+  bundle exec rake db:create RAILS_ENV=$1;
+  bundle exec rake db:migrate RAILS_ENV=$1;
+  bundle exec rake db:seed RAILS_ENV=$1;
+}
+
+export EDITOR=vim

@@ -1,0 +1,5 @@
+# Homebrew
+DOMAIN="Homebrew"
+format_sourcing_message
+
+export PATH="/usr/local/bin:$PATH"

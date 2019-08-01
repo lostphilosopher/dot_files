@@ -1,0 +1,6 @@
+# Editor
+DOMAIN="editor"
+format_sourcing_message
+
+export VISUAL=vim
+export EDITOR=vim

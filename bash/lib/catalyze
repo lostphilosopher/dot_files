@@ -1,0 +1,13 @@
+# Catalyze
+DOMAIN="Catalyze"
+format_sourcing_message
+
+catalyzenotes () {
+  echo 'catalyze logs --tail';
+  echo 'catalyze console <SERVICE_NAME> "bundle exec rails console"';
+  echo 'catalyze redeploy <SERVICE_NAME>';
+  echo 'SSL + Domain:';
+  echo 'catalyze certs create www.example.com ~/Downloads/www.example.com/certificate.pem ~/Downloads/www.example.com/server.key -r';
+  echo 'catalyze sites create www.example.com <SERVICE_NAME> www.example.com';
+  echo 'catalyze redeploy service_proxy';
+}

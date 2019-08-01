@@ -1,0 +1,8 @@
+# Perl
+DOMAIN="Perl"
+format_sourcing_message
+
+perlnotes () {
+  #echo "perl -p -i -e 's/oldstring/newstring/g' \`find ./ -name *.html\`"
+  open http://perlpie.com/
+}

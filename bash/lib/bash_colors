@@ -1,0 +1,7 @@
+# bash colors
+DOMAIN="bash colors"
+format_sourcing_message
+
+RED='\x1B[0;31m';
+GREEN='\x1B[0;32m';
+NC='\x1B[0m'; # No Color

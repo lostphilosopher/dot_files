@@ -1,0 +1,5 @@
+# Java
+DOMAIN="Java"
+format_sourcing_message
+
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"

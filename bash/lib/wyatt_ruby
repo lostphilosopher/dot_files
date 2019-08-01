@@ -1,0 +1,8 @@
+# Wyatt's Ruby Preferences
+DOMAIN="wyatt's ruby"
+format_sourcing_message
+
+if which rbenv > /dev/null; then
+    export RBENV_ROOT=/usr/local/var/rbenv
+    eval "$(rbenv init -)"
+fi

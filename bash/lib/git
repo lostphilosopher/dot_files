@@ -1,0 +1,27 @@
+# Git
+DOMAIN="git"
+format_sourcing_message
+
+alias gs='git status'
+alias gl='git branch'
+export GIT_EDITOR=vim
+alias gitpl='git log --all --decorate --oneline --graph'
+alias gb='git rev-parse --abbrev-ref HEAD'
+alias gitpull='git pull origin `git rev-parse --abbrev-ref HEAD`'
+alias gitpush='git push origin `git rev-parse --abbrev-ref HEAD`'
+alias gitcache='git config --global credential.helper "cache --timeout=28800"' #cache for 8 hours
+alias gitignore='git config --global core.excludesfile ~/dot_files/gitignore_global'
+rebase () {
+  git checkout master
+  git pull origin master
+  git checkout $1
+  git pull --rebase origin master
+  git rebase -i `git merge-base $1 master`
+}
+gitcurl () {
+  curl -o $2 \
+       --header "Authorization: token $GITHUB_CLI_READER_TOKEN" \
+       --header 'Accept: application/vnd.github.v3.raw' \
+       --remote-name \
+       --location $1
+}

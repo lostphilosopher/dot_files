@@ -1,0 +1,5 @@
+# OSE CLI
+DOMAIN="OSE CLI"
+format_sourcing_message
+
+alias oc="~/projects/ocs/v3.6.0/oc"

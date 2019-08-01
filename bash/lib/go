@@ -1,0 +1,6 @@
+# GoLang
+DOMAIN="Go"
+format_sourcing_message
+
+export GOPATH="/Users/wanderse/projects/go"
+export PATH=$PATH:$GOPATH/bin

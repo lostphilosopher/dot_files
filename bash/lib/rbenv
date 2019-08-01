@@ -1,0 +1,5 @@
+# Rbenv
+DOMAIN="Rbenv"
+format_sourcing_message
+
+eval "$(rbenv init -)"

@@ -1,0 +1,5 @@
+# OCI
+DOMAIN="OCI"
+format_sourcing_message
+
+export OCI_DIR=$(brew --prefix)/lib

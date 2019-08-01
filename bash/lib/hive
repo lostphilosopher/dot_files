@@ -1,0 +1,8 @@
+# Hive
+DOMAIN="hive"
+format_sourcing_message
+
+# SOURCE: https://www.dezyre.com/hadoop-tutorial/install-hive
+# Set HIVE_HOME
+export HIVE_HOME="~/projects/hive/ apache-hive-3.1.1-bin"
+export PATH=$PATH:$HIVE_HOME/bin

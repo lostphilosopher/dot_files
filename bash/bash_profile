@@ -1,0 +1,21 @@
+################
+# BASH_PROFILE #
+################
+
+# UNIVERSAL SETTINGS
+
+format_sourcing_message () {
+	echo "Sourcing $DOMAIN preferences...";
+}
+
+[ -r ~/dot_files/bash/.private ] && source ~/dot_files/bash/.private
+[ -r ~/dot_files/bash/lib/bash_history ] && source ~/dot_files/bash/lib/bash_history
+[ -r ~/dot_files/bash/lib/bash_colors ] && source ~/dot_files/bash/lib/bash_colors
+[ -r ~/dot_files/bash/lib/self_managed ] && source ~/dot_files/bash/lib/self_managed
+
+# Source the manifest file (.manifest must be created!!)
+[ -r ~/dot_files/bash/.manifest ] && source ~/dot_files/bash/.manifest
+
+# CUSTOM SETTINGS
+# Anything below here was not added by dot_files 
+# and should be saved before regenerating this file

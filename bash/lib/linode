@@ -1,0 +1,5 @@
+# Linode
+DOMAIN="Linode"
+format_sourcing_message
+
+alias linodein="ssh $LINODE_SSH"

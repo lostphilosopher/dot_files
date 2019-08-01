@@ -1,0 +1,5 @@
+# Sublime
+DOMAIN="Sublime"
+format_sourcing_message
+
+alias subl='sublime'

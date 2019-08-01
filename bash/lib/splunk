@@ -1,0 +1,5 @@
+# Splunk
+DOMAIN="splunk"
+format_sourcing_message
+
+alias splunk='/Applications/Splunk/bin/splunk'

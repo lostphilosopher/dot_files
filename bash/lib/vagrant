@@ -1,0 +1,10 @@
+# Vagrant
+DOMAIN="Vagrant"
+format_sourcing_message
+
+alias vs='vagrant status'
+alias vup='vagrant up'
+
+vhalt () {
+ vagrant global-status --prune | awk '/running/{print $1}' | xargs vagrant halt;
+}

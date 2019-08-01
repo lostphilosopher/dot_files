@@ -1,0 +1,5 @@
+# terraform
+domain="terraform"
+format_sourcing_message
+
+alias tfmt='terraform fmt -recursive'

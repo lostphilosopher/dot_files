@@ -1,0 +1,7 @@
+# Postgres
+DOMAIN="Postgres"
+format_sourcing_message
+
+postgresnotes () {
+  echo 'pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log <start|stop>';
+}

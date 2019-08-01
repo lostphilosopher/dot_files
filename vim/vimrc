@@ -1,0 +1,98 @@
+""""""""""
+" VUNDLE "
+""""""""""
+" 1. cd ~
+" 2. mkdir -p .vim/bundle
+" 3. git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" 4. cp ~/dot_files/vim/vimrc ~/.vimrc
+" 5. vim +PluginInstall +qall
+set nocompatible              " be iMproved, required
+filetype off                  " required
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim' " required
+Plugin 'scrooloose/nerdtree'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tomasr/molokai'
+Plugin 'kien/ctrlp.vim' "http://kien.github.io/ctrlp.vim/ 
+Plugin 'L9'
+Plugin 'hashivim/vim-terraform'
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" Brief help
+" :PluginInstall(!)    - install (update) plugins
+" see :h vundle for more details or wiki for FAQ
+" END VUNDLE
+
+"""""""""""""""""""
+" Vim Preferences "
+"""""""""""""""""""
+
+" Auto resource
+augroup myvimrc
+	au!
+	au BufWritePost .vimrc,_vimrc,vimrc,.gvimrc,_gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
+
+" Aesthetics
+syntax on
+set t_Co=256
+set ruler
+let g:CommandTAcceptSelectionMap = '<C-t>' " Cmd+Tab to open vim in same Mac Tab
+let g:CommandTAcceptSelectionTabMap = '<CR>' " Open vim in new Mac Tab
+colorscheme darkblue
+au InsertLeave * colorscheme darkblue 
+au InsertEnter * colorscheme molokai
+set splitright
+
+" Searching
+set incsearch
+set ignorecase 
+set smartcase
+set wildmode=longest,list
+set hlsearch
+
+" ctrlp (Fuzzy Search)
+let g:ctrlp_by_filename = 1
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|chef)$'
+set wildignore+=*/vendor/**
+let g:ctrlp_map = '<c-t>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" NERDTree
+let g:NERDTreeWinSize=26
+let NERDTreeShowHidden=1
+" autocmd vimenter * NERDTree " Automatically opens NERDTree on vim open 
+
+" Tabbing
+set tabstop=2
+set shiftwidth=2
+set expandtab
+autocmd Filetype php set tabstop=4 shiftwidth=4
+
+" Spacing
+set linebreak
+" note trailing space at end of next line
+set showbreak=>\ \ \
+" Automatically remove whitespace
+autocmd BufWritePre *.php,*.phtml,*.html,*.js,*.rb,*.json :%s/\s\+$//e
+
+" Misc
+set hidden 
+set visualbell
+set nowrap 
+
+" Intuitive backspacing in insert mode
+set backspace=indent,eol,start
+
+" File-type highlighting and configuration.
+filetype on
+filetype plugin on
+filetype indent on
+
+" Terraform
+" let g:terraform_fmt_on_save=1 //not compliant with tf 0.12
+
+" Crontab
+autocmd filetype crontab setlocal nobackup nowritebackup

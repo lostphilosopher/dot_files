@@ -1,0 +1,8 @@
+# Python
+DOMAIN="Python"
+format_sourcing_message
+
+PYTHONPATH='/usr/local/bin/python3.6'
+alias python='python3'
+alias pip='pip3'
+export PYTHONUSERBASE=$HOME

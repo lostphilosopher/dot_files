@@ -1,0 +1,7 @@
+# Vim
+DOMAIN="vim"
+format_sourcing_message
+
+alias vimedit='vim ~/dot_files/vim/vimrc'
+alias editvim='vim ~/dot_files/vim/vimrc'
+alias revim='cp ~/dot_files/vim/vimrc ~/.vimrc'

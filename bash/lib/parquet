@@ -1,0 +1,5 @@
+# Parquet
+DOMAIN="parquet"
+format_sourcing_message
+
+alias parquet='hadoop jar target/parquet-cli-1.12.0-SNAPSHOT-runtime.jar org.apache.parquet.cli.Main'

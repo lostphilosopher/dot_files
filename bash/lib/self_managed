@@ -1,0 +1,21 @@
+# Self managed
+DOMAIN="self_managed"
+format_sourcing_message
+
+alias bashedit='vim ~/dot_files/bash/bash_profile'
+alias editbash='vim ~/dot_files/bash/bash_profile'
+alias rebash='cp ~/dot_files/bash/bash_profile ~/.bash_profile; source ~/.bash_profile'
+commitdots () {
+	cd ~/dot_files;
+  git add -A
+	if git diff-index --quiet HEAD --; then
+		echo -e "${RED}No local changes to dot_files to commit${NC}"
+	else
+		git pull origin master;
+		git add -A;
+		git commit -m 'Changes to dot_files committed via script';
+		git push origin master;
+		echo -e "${GREEN}Local changes to dot_files commited${NC}";
+	fi
+	cd -;
+}

@@ -1,0 +1,23 @@
+# RVM
+DOMAIN="RVM"
+format_sourcing_message
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# rvm reinstall 2.2.2 --disable-binary
+# rvm osx-ssl-certs update all
+# rvm osx-ssl-certs status all
+
+sslfix () {
+  rvm osx-ssl-certs update all
+  rvm osx-ssl-certs status all
+  brew update
+  brew install openssl
+  brew tap raggi/ale
+  brew install openssl-osx-ca
+  brew services start raggi/ale/openssl-osx-ca
+  ruby -v
+  echo "If this doesn't fix the issue try, rvm reinstall YOUR_RUBY_VERSION --disable-binary"
+}

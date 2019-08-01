@@ -1,0 +1,7 @@
+# Sidekiq
+DOMAIN="sidekiq"
+format_sourcing_message
+
+sidekiqnotes () {
+  echo "bundle exec sidekiq -d -L log/sidekiq.log -C config/sidekiq.yml -e development";
+}
